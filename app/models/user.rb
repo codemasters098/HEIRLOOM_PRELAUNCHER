@@ -19,21 +19,21 @@ class User < ActiveRecord::Base
       'html' => 'Garlic<br>Peeler',
       'class' => 'two',
       'image' =>  ActionController::Base.helpers.asset_path(
-        '/assets/refer/garlic.jpg')
+        '/assets/refer/garlicp.jpg')
     },
     {
       'count' => 10,
       'html' => 'Knife<br>Cover',
       'class' => 'three',
       'image' => ActionController::Base.helpers.asset_path(
-        '/assets/refer/cover.jpg')
+        '/assets/refer/cover.png')
     },
     {
       'count' => 25,
       'html' => 'Cutting<br>Board',
       'class' => 'four',
       'image' => ActionController::Base.helpers.asset_path(
-        '/assets/refer/product2.jpg')
+        '/assets/refer/product2.png')
     },
     {
       'count' => 50,
