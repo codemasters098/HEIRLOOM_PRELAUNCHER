@@ -31,7 +31,7 @@ html.home{
 #home .hero{
 	width: 100%;
 	height: 446px;
-	background: image-url("home/home.png") center center no-repeat;
+	background: image-url("home/rsz_home_2.jpg") center center no-repeat;
 	background-size: 1600px 446px;
 	overflow: hidden;
 	position: relative;
@@ -297,21 +297,22 @@ html.home{
 	background: image-url("refer/HungryCaveman.png") 0 0 no-repeat;
 	background-size: 610px 394px;
 	overflow: hidden;
-	margin-top: 15px;
+	margin-top: 0;
+
 	float: left;
 }
 
 #refer .mammoth .need{
 	color: #074E6F;
-	font-size: 38px;
+	font-size: 30px;
 	text-transform: uppercase;
 	font-weight: bold;
-	margin: 10px 80 0 0;
+	margin: 100px 20px 0 0;
 	display: block;
-	line-height: 56px;
+	line-height: 40px;
 	letter-spacing: 4px;
 	text-align: center;
-	width: 284px;
+	width: 224px;
 }
 
 #refer .share-wrap{
@@ -616,7 +617,7 @@ only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2) {
 	#home .hero{
-		background: image-url("home/hero@2x.jpg") center center no-repeat;
+		background: image-url("home/rsz_home_2.jpg") center center no-repeat;
 		background-size: 1600px 446px;
 	}
 
@@ -631,7 +632,7 @@ only screen and (min-device-pixel-ratio: 2) {
 	}
 
 	#refer .mammoth{
-		background: image-url("refer/mammoth@2x.png") 0 0 no-repeat;
+		background: image-url("refer/HungryCaveman.png") 0 0 no-repeat;
 		background-size: 610px 394px;
 	}
 
