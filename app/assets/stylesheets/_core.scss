@@ -31,7 +31,7 @@ html.home{
 #home .hero{
 	width: 100%;
 	height: 446px;
-	background: image-url("home/main.jpg") center center no-repeat;
+	background: image-url("home/new.jpg") center center no-repeat;
 	background-size: 1600px 446px;
 	overflow: hidden;
 	position: relative;
@@ -41,10 +41,10 @@ html.home{
 
 #home .hero .large{
 	font-weight: bold;
-	font-size: 40px;
-	color: #074E6F;
+	font-size: 30px;
+	color: #0000FF;
 	text-transform: uppercase;
-	margin: 85px 0 0 136px;
+	margin: 145px 0 0 70px;
 	position: relative;
 	z-index: 2;
 	letter-spacing: 2px;
@@ -52,9 +52,9 @@ html.home{
 
 #home .hero .small{
 	font-weight: bold;
-	color: #955F5D;
-	font-size: 18px;
-	margin: 10px 0 0 115px;
+	color: #B00000;
+	font-size: 20px;
+	margin: 10px 0 0 155px;
 	line-height: 30px;
 	position: relative;
 	z-index: 2;
@@ -232,7 +232,7 @@ html.home{
 }
 
 .brandon{
-	font-family: "Brandon Grotesque", "brandon-grotesque", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+	font-family: "Myriad Pro";
 }
 
 #refer{
@@ -278,7 +278,7 @@ html.home{
 	line-height: 0;
 	margin-right: 14px;
 	letter-spacing: 1px;
-	background: image-url("refer/logo_.png") 0 0 no-repeat;
+	background: image-url("refer/logo.png") 0 0 no-repeat;
 	background-size: 106px 19px;
 	height: 19px;
 	width: 106px;
@@ -294,25 +294,24 @@ html.home{
 #refer .mammoth{
 	width: 612px;
 	height: 394px;
-	background: image-url("refer/HungryCaveman.png") 0 0 no-repeat;
+	background: image-url("refer/mammoth.png") 0 0 no-repeat;
 	background-size: 610px 394px;
 	overflow: hidden;
-	margin-top: 0;
-
+	margin-top: 15px;
 	float: left;
 }
 
 #refer .mammoth .need{
-	color: #074E6F;
-	font-size: 30px;
+	color: #FFF;
+	font-size: 38px;
 	text-transform: uppercase;
 	font-weight: bold;
-	margin: 10px 20px 0 0;
+	margin: 102px 0 0 72px;
 	display: block;
-	line-height: 40px;
+	line-height: 56px;
 	letter-spacing: 4px;
 	text-align: center;
-	width: 224px;
+	width: 284px;
 }
 
 #refer .share-wrap{
@@ -617,7 +616,7 @@ only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2) {
 	#home .hero{
-		background: image-url("home/main.jpg") center center no-repeat;
+		background: image-url("home/new.jpg") center center no-repeat;
 		background-size: 1600px 446px;
 	}
 
@@ -632,7 +631,7 @@ only screen and (min-device-pixel-ratio: 2) {
 	}
 
 	#refer .mammoth{
-		background: image-url("refer/HungryCaveman.png") 0 0 no-repeat;
+		background: image-url("refer/mammoth@2x.png") 0 0 no-repeat;
 		background-size: 610px 394px;
 	}
 
@@ -671,44 +670,3 @@ only screen and (min-device-pixel-ratio: 2) {
 		background-size: 16px 10px;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
