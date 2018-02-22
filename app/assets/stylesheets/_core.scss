@@ -294,21 +294,34 @@ html.home{
 #refer .mammoth{
 	width: 612px;
 	height: 394px;
-	background: image-url("refer/mammoth.png") 0 0 no-repeat;
-	background-size: 610px 394px;
-	overflow: hidden;
-	margin-top: 15px;
+	background-image: url("refer/mammoth.png");
+	background-repeat: no-repeat;
+	background-size: auto 95%;
+	background-position: center 100%;
 	float: left;
 }
 
+#refer .hungry-caveman{
+	
+	width: 100%;
+    height: 100%;
+    background-image: url(refer/HungryCaveman.png);
+    background-repeat: no-repeat;
+    background-size: auto 110%;
+    margin: 0 0 0 0;
+    background-position: center 70%;
+}
+
 #refer .mammoth .need{
-	color: #FFF;
-	font-size: 38px;
+	color: #0c628a;
+	font-size: 2em;
 	text-transform: uppercase;
 	font-weight: bold;
-	margin: 102px 0 0 72px;
+	// margin: 102px 0 0 72px;
+	margin-left: -2em;
+	padding-top: 2em;
 	display: block;
-	line-height: 56px;
+	line-height: 1.2em;
 	letter-spacing: 4px;
 	text-align: center;
 	width: 284px;
