@@ -5,6 +5,7 @@
   </div>
 </div>
 
+
 <div class="hero">
   <div class="page-content clearfix">
     <div class="mammoth">
@@ -27,6 +28,161 @@
   </div>
 </div>
 
+
+<!--Timeline-->
+<%
+  referrals_count = @user.referrals.count
+
+  stops = User::REFERRAL_STEPS
+
+  found = nil
+
+  stops.reverse_each { |stop|
+    if stop["count"] <= referrals_count and !found
+      stop["selected"] = true
+      found = stop
+    else
+      stop["selected"] = false
+    end
+  }
+%>
+<div class="ho-referal-details <% if found %>prize-<%= found["class"] %><% end %>">
+  <div>
+    <p class="callout brandon">HERE'S HOW IT WORKS</p>
+    
+    <!-- Ho-progress mobile -->
+    <div class="ho-progress-mobile">
+      <div class="ho-progress-label">
+        <p>Friends joined</p>
+        <div class="progress">
+          <div class="mover" style="width: 100%;"></div>
+        </div>
+        <p>Heirloom Goods</p>
+      </div><!--
+      
+      --><div class="ho-progress-actual">
+        
+        <div class="ho-rewards">
+          
+          <% stops.each do |stop| %>
+            <div class="ho-reward <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
+              <div class="circle <%= 'achieved' if stop["count"] <= referrals_count %>"><%= stop["count"] %></div>
+              <div class="tooltip">
+                <img src="<%= stop["image"] %>" height="254">
+              </div>
+            </div>
+          <% end %>
+        </div>
+        <%
+          progress = 0
+          
+          if referrals_count >= 50
+            progress = 100
+          elsif referrals_count >= 25
+            progress = 75
+          elsif referrals_count >= 10
+            progress = 50
+          elsif referrals_count >= 5
+            progress = 25
+          elsif referrals_count > 0
+            progress = 12
+          end
+        %>
+    
+        <div class="progress">
+          <div class="mover" style="height: <%= progress %>%;">
+          </div>
+        </div>
+        
+        <div class="ho-reward-titles"><!--
+          
+          <% stops.each do |stop| %>
+              --><p><%= stop["html"].html_safe %></p><!--
+          <% end %>
+          -->
+        </div>
+      </div>
+    </div>
+    
+    <!-- /Ho-progress mobile -->
+    
+    <div class="ho-progress">
+      <div class="ho-progress-label">
+        <p>Friends joined</p>
+        <div class="progress">
+          <div class="mover" style="width: 100%;"></div>
+        </div>
+        <p>Heirloom Goods</p>
+      </div><!--
+      
+      --><div class="ho-progress-actual">
+        
+        <div class="ho-rewards">
+          <!--
+          <% stops.each do |stop| %>
+            --><div class="ho-reward <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
+              <div class="circle"><%= stop["count"] %></div>
+              <div class="tooltip">
+                <img src="<%= stop["image"] %>" height="254">
+              </div>
+            </div><!--
+          <% end %>
+          -->
+        </div>
+        <%
+          progress = 0
+          
+          if referrals_count >= 50
+            progress = 100
+          elsif referrals_count >= 25
+            progress = 75
+          elsif referrals_count >= 10
+            progress = 50
+          elsif referrals_count >= 5
+            progress = 25
+          elsif referrals_count > 0
+            progress = 12
+          end
+        %>
+    
+        <div class="progress">
+          <div class="mover" style="width: <%= progress %>%;">
+          </div>
+        </div>
+        
+        <div class="ho-reward-titles">
+          <!--
+          <% stops.each do |stop| %>
+              --><p><%= stop["html"].html_safe %></p><!--
+          <% end %>
+          -->
+        </div>
+      </div>
+      
+    </div>
+
+    <%
+      words = ''
+      if referrals_count == 1
+        words = 'friend has'
+      else
+        words = 'friends have'
+      end
+    %>
+
+    <% if referrals_count == 0 %>
+      <p class="place brandon"><span>No</span> friends have joined...Yet!</p>
+    <% else %>
+      <p class="place brandon"><span><%= referrals_count %></span> <%= words %> joined</p>
+    <% end %>
+    <p class="check brandon">Keep checking</p>
+    <p class="ship brandon">We ship to the U.S. (& Canada Soon)</p>
+    <a class="policy brandon ho-link" href="/privacy-policy" target="_blank">Privacy Policy</a>
+  </div>
+</div>
+<!--/Timeline-->
+
+<!-- Old Code replaced with above timeline.
 <%
   referrals_count = @user.referrals.count
 
@@ -87,3 +243,4 @@
     <a class="policy brandon" href="/privacy-policy" target="_blank">Privacy Policy</a>
   </div>
 </div>
+-->
